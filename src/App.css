@@ -1,38 +1,105 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Barlow&display=swap');
+
+body {
+  font-family: 'Barlow', sans-serif;
+  color: rgb(37, 33, 33);
+}
+
+.nav-style {
+  background: url('https://images.unsplash.com/photo-1501612780327-45045538702b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')
+    no-repeat center center/cover;
+  height: 20rem;
+  width: 100vw;
+  margin-bottom: 3rem;
   text-align: center;
+  color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.load-more {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  padding: 10px 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.lyric-btn {
+  width: 8rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  border: none;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: rgb(112, 112, 112);
+  text-decoration: none;
+  outline: none;
 }
 
-.App-link {
-  color: #61dafb;
+.lyric-btn:hover {
+  background: rgb(231, 149, 187, 0.7);
+  transition: background-color 0.6s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.lyric-btn:active {
+  outline: none;
+}
+
+.space {
+  margin-left: 1rem;
+}
+
+form {
+  background: #fff;
+  display: inline-block;
+  border-radius: 50px 50px 50px 50px;
+}
+
+input[type='text'] {
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  font-size: 18px;
+}
+
+input[type='text']:focus {
+  outline: none;
+}
+
+input[type='submit'] {
+  padding: 10px;
+  font-size: 18px;
+  background-color: rgb(107, 194, 206);
+  font-weight: 500;
+  border: #fff 2px solid;
+  color: #fff;
+  border-radius: 20px 20px 20px 20px;
+}
+
+input[type='submit']:focus {
+  outline: none;
+}
+
+input[type='submit']:hover {
+  transition: background-color 0.5s ease;
+  background-color: rgb(107, 194, 206, 0.7);
+}
+
+.lyrics {
+  padding: 20px 80px;
+  text-align-last: left;
+  line-height: 2;
+}
+
+.song-card {
+  box-shadow: 1px 2px 4px pink;
+}
+
+@media only screen and (max-width: 600px) {
+  .track-container {
+    display: flex;
+    justify-content: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .song-card {
+    padding-left: 3rem;
+    display: flex;
+    width: 26rem;
   }
 }
